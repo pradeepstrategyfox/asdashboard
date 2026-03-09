@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Sidebar from './components/Sidebar'
 import Topbar from './components/Topbar'
@@ -20,11 +21,19 @@ function Footer() {
 }
 
 function App() {
+  const [drawerOpen, setDrawerOpen] = useState(false)
+
   return (
     <div className="app-layout">
-      <Sidebar />
+      {/* Mobile overlay */}
+      {drawerOpen && (
+        <div className="mobile-overlay" onClick={() => setDrawerOpen(false)} />
+      )}
+
+      <Sidebar drawerOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
+
       <div className="main-wrapper">
-        <Topbar />
+        <Topbar onMenuClick={() => setDrawerOpen(v => !v)} />
         <DashboardContent />
         <Footer />
       </div>
