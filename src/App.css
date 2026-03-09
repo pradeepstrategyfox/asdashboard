@@ -1369,20 +1369,18 @@ body {
     letter-spacing: 1.5px;
   }
 
-  /* ── Past Orders – 2-column for readability ── */
+  /* ── Past Orders – 3-column to match Upcoming Orders ── */
   .past-orders-section {
     gap: 14px;
   }
 
   .past-orders-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
     overflow-x: visible;
   }
 
-  /* Show only the first two cards on mobile; 
-     3rd card wraps to next row — still readable */
   .past-order-card {
     min-width: unset;
     width: 100%;
@@ -1391,8 +1389,8 @@ body {
   }
 
   .order-card-label {
-    font-size: 11px;
-    padding: 8px 10px 5px;
+    font-size: 9px;
+    padding: 6px 7px 4px;
     color: var(--text-secondary);
     font-weight: 500;
   }
@@ -1402,17 +1400,17 @@ body {
   }
 
   .order-card-name {
-    font-size: 12px;
-    padding: 8px 10px 4px;
+    font-size: 10px;
+    padding: 6px 7px 3px;
     line-height: 1.4;
     font-weight: 500;
   }
 
   .order-status {
-    font-size: 9px;
-    margin: 4px 10px 10px;
-    padding: 4px 8px;
-    letter-spacing: 0.8px;
+    font-size: 8px;
+    margin: 3px 6px 8px;
+    padding: 3px 5px;
+    letter-spacing: 0.5px;
   }
 
   /* ── Upcoming Orders – 3-col compact ── */
