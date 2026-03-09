@@ -1005,18 +1005,18 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 14px 16px;
+  padding: 16px 18px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
 
 .mpc-avatar {
-  width: 56px;
-  height: 56px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--gold-dim);
+  border: 2.5px solid var(--gold-dim);
   flex-shrink: 0;
 }
 
@@ -1030,19 +1030,29 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .mpc-name {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   font-family: 'Playfair Display', serif;
   color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.mpc-info .member-badge {
+  padding: 4px 10px;
+}
+
+.mpc-info .badge-text {
+  font-size: 9px;
 }
 
 .mpc-meta {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-secondary);
+  margin-top: 1px;
 }
 
 .mpc-delivery {
@@ -1051,13 +1061,13 @@ body {
 }
 
 .mpc-delivery .delivery-label {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-muted);
 }
 
 .mpc-delivery .delivery-date {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   color: var(--gold);
 }
 
@@ -1188,10 +1198,31 @@ body {
 
   /* Topbar mobile adjustments */
   .topbar {
-    padding: 0 14px;
+    padding: 0 16px;
+    height: 64px;
+    min-height: 64px;
     position: sticky;
     top: 0;
     z-index: 100;
+  }
+
+  .brand-a1 {
+    font-size: 24px;
+  }
+
+  .brand-text {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-avatar-btn {
+    width: 40px;
+    height: 40px;
   }
 
   .mobile-hamburger {
@@ -1242,15 +1273,33 @@ body {
     display: none;
   }
 
-  /* Quarterly timeline: horizontal scroll on mobile */
+  /* Quarterly timeline: fits all 4 quarters in one screen, no scroll */
   .quarterly-timeline-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 4px;
+    overflow-x: visible;
   }
 
   .quarterly-timeline {
-    min-width: 500px;
+    min-width: unset;
+    width: 100%;
+    display: flex;
+  }
+
+  .quarter-item {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .quarter-label {
+    font-size: 14px;
+  }
+
+  .quarter-gold {
+    font-size: 17px;
+  }
+
+  .quarter-sub {
+    font-size: 9px;
+    word-break: break-word;
   }
 
   .quarterly-section {
@@ -1259,26 +1308,46 @@ body {
 
   .quarterly-header {
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
+    margin-bottom: 10px;
   }
 
   .quarterly-header-right {
-    gap: 12px;
+    gap: 10px;
   }
 
-  /* Past orders: single scroll row on mobile */
+  .view-all-link {
+    font-size: 9px;
+  }
+
+  /* Past orders: 3-col grid that fills the screen width – no horizontal scroll */
   .past-orders-grid {
-    grid-template-columns: repeat(3, 140px);
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    padding-bottom: 4px;
-    display: flex;
+    overflow-x: visible;
   }
 
   .past-order-card {
-    min-width: 140px;
-    flex-shrink: 0;
+    min-width: unset;
+    width: 100%;
+    flex-shrink: unset;
+  }
+
+  .order-card-label {
+    font-size: 9px;
+    padding: 6px 7px 4px;
+  }
+
+  .order-card-name {
+    font-size: 10px;
+    padding: 6px 7px 3px;
+  }
+
+  .order-status {
+    font-size: 8px;
+    margin: 3px 7px 8px;
+    padding: 3px 5px;
   }
 
   /* Upcoming orders: horizontal scroll */
@@ -1313,10 +1382,17 @@ body {
 @media (max-width: 375px) {
   .topbar {
     padding: 0 10px;
+    height: 58px;
+    min-height: 58px;
+  }
+
+  .brand-a1 {
+    font-size: 20px;
   }
 
   .brand-text {
-    display: none;
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 
   .dashboard-content {
@@ -1324,11 +1400,29 @@ body {
   }
 
   .quarterly-section {
-    padding: 12px 14px;
+    padding: 10px 12px;
   }
 
-  .past-order-card {
-    min-width: 120px;
+  .quarter-label {
+    font-size: 12px;
+  }
+
+  .quarter-gold {
+    font-size: 14px;
+  }
+
+  .quarter-badge {
+    font-size: 8px;
+    padding: 2px 8px;
+  }
+
+  .mpc-avatar {
+    width: 56px;
+    height: 56px;
+  }
+
+  .mpc-name {
+    font-size: 16px;
   }
 
   .upcoming-card {
