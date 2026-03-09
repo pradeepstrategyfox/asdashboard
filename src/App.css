@@ -1097,7 +1097,7 @@ body {
   right: 0;
   background: var(--bg-panel);
   border-top: 1px solid var(--border);
-  display: flex;
+  display: none;
   justify-content: space-around;
   padding: 8px 0 12px;
   z-index: 50;
