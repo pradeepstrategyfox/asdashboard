@@ -724,7 +724,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  align-items: start;
+  align-items: stretch;
 }
 
 /* ===== PHOTO SHOOT ===== */
@@ -837,6 +837,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 100%;
 }
 
 .notes-card {
@@ -847,6 +848,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex: 1;
 }
 
 .notes-existing {
