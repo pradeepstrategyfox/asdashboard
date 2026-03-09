@@ -35,6 +35,7 @@ body,
   height: 100%;
   width: 100%;
   overflow: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -43,7 +44,9 @@ body {
   color: var(--text-primary);
   font-size: 13px;
   line-height: 1.5;
+  overflow-x: hidden;
 }
+
 
 /* ===== APP LAYOUT ===== */
 .app-layout {
@@ -1152,19 +1155,22 @@ body {
 /* ── Mobile: 768px and below ── */
 @media (max-width: 768px) {
 
-  /* Root layout */
+  /* Root layout – vertical scroll only, no horizontal */
   html,
   body,
   #root {
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     height: auto;
     min-height: 100%;
+    max-width: 100vw;
   }
 
   .app-layout {
     height: auto;
     min-height: 100vh;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
   }
 
   /* Sidebar becomes a fixed off-canvas drawer */
