@@ -52,7 +52,7 @@ function Topbar({ onMenuClick }) {
                 </button>
                 {/* Mobile profile avatar */}
                 <button className="mobile-avatar-btn mobile-only" aria-label="Profile" onClick={onMenuClick}>
-                    <img src="/andrew_profile.png" alt="Profile" />
+                    <img src="/andrew_profile.jpg" alt="Profile" />
                 </button>
             </div>
         </header>

@@ -71,7 +71,7 @@ function DashboardContent() {
             {/* ── Mobile-only profile card ── */}
             <div className="mobile-profile-card mobile-only">
                 <div className="mpc-avatar">
-                    <img src="/andrew_profile.png" alt="Andrew Covington" />
+                    <img src="/andrew_profile.jpg" alt="Andrew Covington" />
                 </div>
                 <div className="mpc-info">
                     <div className="mpc-name">Andrew Covington</div>
@@ -106,7 +106,7 @@ function DashboardContent() {
                         <span className="reminder-sub"> A1 Showroom, NYC – Mark Hastings</span>
                     </div>
                     <div className="reminder-avatar">
-                        <img src="/andrew_profile.png" alt="Mark" />
+                        <img src="/andrew_profile.jpg" alt="Mark" />
                     </div>
                     <button className="reminder-arrow">›</button>
                 </div>
@@ -184,7 +184,7 @@ function DashboardContent() {
                     <div className="photoshoot-card">
                         <div className="photoshoot-top">
                             <div className="photoshoot-avatar">
-                                <img src="/andrew_profile.png" alt="Shoot" />
+                                <img src="/andrew_profile.jpg" alt="Shoot" />
                             </div>
                             <div className="photoshoot-info">
                                 <div className="photoshoot-date-line">
