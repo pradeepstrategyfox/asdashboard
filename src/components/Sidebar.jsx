@@ -10,7 +10,7 @@ function Sidebar({ drawerOpen, onClose }) {
                 </button>
 
                 <div className="sidebar-profile-image">
-                    <img src="/andrew_profile.png" alt="Andrew Covington" className="profile-img" />
+                    <img src="/andrew_profile.jpg" alt="Andrew Covington" className="profile-img" />
                     <div className="profile-overlay"></div>
                 </div>
 
